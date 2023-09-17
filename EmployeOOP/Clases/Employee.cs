@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeOOP.Clases
+﻿namespace EmployeOOP.Clases
 {
-     public abstract class Employee
+    public abstract class Employee
     {
         #region Properties
         public int Id { get; set; }
-        public int? FirstName { get; set; }
+        public string? FirstName { get; set; }
 
-        public int? LastName { get; set; }
+        public string? LastName { get; set; }
 
         public Date? BirthDate { get; set; }
 
@@ -33,7 +27,7 @@ namespace EmployeOOP.Clases
                    $"Apellidos: {LastName}\n\t" +
                    $"Fecha de cumpleaños: {BirthDate}\n\t" +
                    $"Fecha de contratación: {HiringDate}\n\t" +
-                   $"¿Empleado activo?: {IsActive}\n\t"; 
+                   $"¿Empleado activo?: {IsActive}\n\t";
         }
 
         #endregion Methods

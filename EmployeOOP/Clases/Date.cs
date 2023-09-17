@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EmployeOOP.Clases
+﻿namespace EmployeOOP.Clases
 {
     public class Date
     {
@@ -28,7 +22,7 @@ namespace EmployeOOP.Clases
         private int ValidateDay(int day, int month, int year)
         {
             // Validar si el día ingresado pertenence a un año bisiesto
-            if(month==2 && day==29 && IsleapYear(year))
+            if (month == 2 && day == 29 && IsleapYear(year))
             {
                 return day;
             }
@@ -42,19 +36,20 @@ namespace EmployeOOP.Clases
 
             int[] daysPerMonth = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-            if(day>=1 && day <= daysPerMonth[month])
+            if (day >= 1 && day <= daysPerMonth[month])
             {
                 return day;
             }
             else
             {
-                throw new DayException(String.Format("El día {0} no es válido para el mes {1}", day , month));
+                throw new DayException(String.Format("El día {0} no es válido para el mes {1}", day, month));
             }
         }
 
         private void IsLeapYearException(bool isLeapYear, int year)
         {
-            if (!isLeapYear) {
+            if (!isLeapYear)
+            {
                 throw new YearException(String.Format("El año {0} no es bisisesto", year));
             }
         }
@@ -79,14 +74,14 @@ namespace EmployeOOP.Clases
 
         private int ValidateMonth(int month)
         {
-            if(month>=1 && month <= 12)
+            if (month >= 1 && month <= 12)
             {
                 return month;
             }
             else
             {
                 //Exception creation
-                throw new MonthException(String.Format("El mes {0} no exíste" , month));
+                throw new MonthException(String.Format("El mes {0} no exíste", month));
             }
         }
 
